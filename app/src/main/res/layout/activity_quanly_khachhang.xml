@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.quanly_nhanvien"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#A9F1A8">
+        <ImageView
+
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/left"/>
+
+        <TextView
+            android:paddingTop="10sp"
+            android:layout_width="325dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:text="Quản lý khách hàng"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="#F7F7F7"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/edt_TK"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Tìm kiếm" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/search" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nhập thông tin"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/custom_layout_nhapthontin"
+            android:padding="10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mã khách hàng*"
+                        android:textStyle="italic"/>
+
+                    <EditText
+                        android:id="@+id/edt_idKH"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Mã khách hàng"
+                        android:background="@drawable/custom_edittext"
+                        android:paddingLeft="8sp"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:cursorVisible="false"         />
+                </LinearLayout>
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tên khách hàng*"
+                        android:textStyle="italic"/>
+
+                    <EditText
+                        android:id="@+id/edt_tenKH"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Tên khách hàng"
+                        android:background="@drawable/custom_edittext"
+                        android:paddingLeft="8sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Địa chỉ*"
+                        android:textStyle="italic"/>
+
+                    <EditText
+                        android:id="@+id/edt_diachi"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Nhập địa chỉ"
+                        android:background="@drawable/custom_edittext"
+                        android:paddingLeft="8sp"/>
+                </LinearLayout>
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Số điện thoại*"
+                        android:textStyle="italic"/>
+
+                    <EditText
+                        android:id="@+id/edt_sdt"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_edittext"
+                        android:hint="Số điện thoại"
+                        android:paddingLeft="8sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/custom_button_admin_page"
+            android:text="Create"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/custom_button_admin_page"
+            android:text="Update"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/custom_button_admin_page"
+            android:text="Delete"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Danh Sách Khách Hàng"
+        android:gravity="center"
+        android:textSize="19sp"
+        android:textColor="#FF9182"
+        android:textStyle="bold"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+
+        <ListView
+            android:id="@+id/lv_client"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_layout_nhapthontin" />
+    </LinearLayout>
+</LinearLayout>

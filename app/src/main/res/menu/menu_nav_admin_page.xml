@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:checkableBehavior="single">
+        <item android:id="@+id/nav_qlnv_admin_page"
+            android:title="@string/nav_qlnv_admin_page"
+            android:icon="@drawable/staff"/>
+
+        <item android:id="@+id/nav_qlkh_admin_page"
+            android:title="@string/nav_qlkh_admin_page"
+            android:icon="@drawable/client"/>
+
+        <item android:id="@+id/nav_qlsp_admin_page"
+            android:title="@string/nav_qlsp_admin_page"
+            android:icon="@drawable/product"/>
+
+        <item android:id="@+id/nav_qlhd_admin_page"
+            android:title="@string/nav_qlhd_admin_page"
+            android:icon="@drawable/bill"/>
+
+        <item android:id="@+id/nav_history_admin_page"
+            android:title="@string/nav_history_admin_page"
+            android:icon="@drawable/history"/>
+    </group>
+    <item
+        android:title="@string/nav_account_admin_page">
+        <menu>
+            <item android:id="@+id/nav_signOut_admin_page"
+                android:title="@string/nav_signOut_admin_page"
+                android:icon="@drawable/logout"/>
+        </menu>
+    </item>
+</menu>

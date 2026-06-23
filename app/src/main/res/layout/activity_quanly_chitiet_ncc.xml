@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_chitiet_ncc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4EFF7"
+    android:fitsSystemWindows="true">
+
+    <!-- Thanh tiêu đề -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#A9F1A8">
+
+        <ImageView
+            android:id="@+id/btnBackChiTietNCC"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="8dp"
+            android:src="@drawable/left" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="CHI TIẾT NHÀ CUNG CẤP"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
+
+    <!-- Nội dung chi tiết -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Ảnh đại diện nhà cung cấp -->
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/client"
+                android:scaleType="fitCenter" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="18dp" />
+
+            <!-- Mã nhà cung cấp -->
+            <TextView
+                android:id="@+id/txtMaNCC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mã NCC: "
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#333333" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <!-- Tên nhà cung cấp -->
+            <TextView
+                android:id="@+id/txtTenNCC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tên NCC: "
+                android:textSize="16sp"
+                android:textColor="#333333" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <!-- Số điện thoại -->
+            <TextView
+                android:id="@+id/txtSDT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SĐT: "
+                android:textSize="16sp"
+                android:textColor="#333333" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <!-- Địa chỉ -->
+            <TextView
+                android:id="@+id/txtDiaChi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Địa chỉ: "
+                android:textSize="16sp"
+                android:textColor="#333333" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <!-- Tiêu đề sản phẩm -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DANH SÁCH SẢN PHẨM CUNG CẤP"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#FF9182" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <!-- Sản phẩm cung cấp -->
+            <TextView
+                android:id="@+id/txtSanPham"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sản phẩm cung cấp"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:background="#D9E0F0"
+                android:padding="10dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

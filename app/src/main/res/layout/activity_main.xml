@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundlogin"
+    android:scrollbars="vertical"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="480dp"
+        android:background="@drawable/layout_login"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/fontbibomart"
+            android:gravity="center_horizontal"
+            android:text="PT Mart"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="229dp"
+            android:layout_height="224dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/imgmaybay" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/create_account"
+                android:layout_width="250dp"
+                android:layout_height="55dp"
+                android:text="Create Account"
+                android:backgroundTint="#A9F1A8"
+                android:textSize="21sp"/>
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="250dp"
+                android:layout_height="55dp"
+                android:text="Sign In"
+                android:backgroundTint="#E1EA8F"
+                android:textSize="21sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

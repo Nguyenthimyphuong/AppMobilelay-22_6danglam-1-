@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:layout_margin="8dp"
+    android:background="#FFFFFF"
+    android:gravity="center_vertical">
+
+    <!-- Phần thông tin hóa đơn bên trái -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Mã hóa đơn -->
+        <TextView
+            android:id="@+id/txtMaHD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HD01"
+            android:textColor="#5E35B1"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <!-- Tên khách hàng -->
+        <TextView
+            android:id="@+id/txtTenKH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Nguyễn Văn A"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+        <!-- Tổng tiền -->
+        <TextView
+            android:id="@+id/txtTongTien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="450.000 VNĐ"
+            android:textColor="#FF4081"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+
+        <!-- Trạng thái, nếu Adapter không dùng thì vẫn để trống cũng không sao -->
+        <TextView
+            android:id="@+id/txtTrangThai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text=""
+            android:textColor="#666666"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Phần nút bên phải -->
+    <LinearLayout
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginStart="10dp">
+
+        <!-- Nút chi tiết: tăng chiều rộng để không bị mất chữ -->
+        <Button
+            android:id="@+id/btnChiTiet"
+            android:layout_width="92dp"
+            android:layout_height="42dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:text="Chi tiết"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:singleLine="true"
+            android:backgroundTint="#6E4ACB" />
+
+        <!-- Khoảng cách giữa 2 nút -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <!-- Nút xóa -->
+        <Button
+            android:id="@+id/btnXoa"
+            android:layout_width="92dp"
+            android:layout_height="42dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:text="Xóa"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:singleLine="true"
+            android:backgroundTint="#7E57C2" />
+
+    </LinearLayout>
+
+</LinearLayout>

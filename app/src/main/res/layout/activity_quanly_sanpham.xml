@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.quanly_sanpham"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="#E8C3C4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#A9F1A8">
+        <ImageView
+
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/left"/>
+
+        <TextView
+            android:paddingTop="10sp"
+            android:layout_width="325dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:text="Quản lý sản phẩm"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:textColor="#000"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="end">
+
+        <EditText
+            android:id="@+id/edt_TK"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Tìm kiếm"/>
+        <ImageView
+            android:id="@+id/btn_search"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nhập thông tin"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/custom_layout_nhapthontin"
+            android:padding="10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mã sản phẩm*"
+                        android:textStyle="italic"
+                        />
+
+                    <EditText
+                        android:id="@+id/edt_idSP"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Mã sản phẩm"
+                        android:background="@drawable/custom_edittext"
+                        android:paddingLeft="8sp"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:cursorVisible="false"/>
+                </LinearLayout>
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tên sản phẩm*"
+                        android:textStyle="italic"/>
+
+                    <EditText
+                        android:id="@+id/edt_tenSP"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Tên sản phẩm"
+                        android:background="@drawable/custom_edittext"
+                        android:paddingLeft="8sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Dòng số lượng + giá -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Số lượng*"
+                        android:textStyle="italic"/>
+
+                    <EditText
+                        android:id="@+id/edt_sl"
+                        android:layout_width="150dp"
+                        android:layout_height="48dp"
+                        android:hint="Số lượng"
+                        android:background="@drawable/custom_edittext"
+                        android:inputType="number"/>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Giá tiền*"
+                        android:textStyle="italic"/>
+
+                    <EditText
+                        android:id="@+id/edt_gia"
+                        android:layout_width="150dp"
+                        android:layout_height="48dp"
+                        android:hint="Giá tiền"
+                        android:background="@drawable/custom_edittext"
+                        android:inputType="numberDecimal"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Dòng ảnh sản phẩm -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingStart="12dp">
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ảnh sản phẩm*"
+                        android:paddingLeft="10dp"
+                        android:textStyle="italic"/>
+
+                    <Spinner
+                        android:id="@+id/sp_image"
+                        android:layout_width="150dp"
+                        android:layout_height="48dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/custom_button_admin_page"
+            android:text="Create"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/custom_button_admin_page"
+            android:text="Update"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/custom_button_admin_page"
+            android:text="Delete"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Danh Sách Sản Phẩm"
+        android:gravity="center"
+        android:textSize="23sp"
+        android:textColor="#000"
+        android:textStyle="bold"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+
+        <ListView
+            android:id="@+id/lv_product"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_layout_nhapthontin" />
+    </LinearLayout>
+</LinearLayout>

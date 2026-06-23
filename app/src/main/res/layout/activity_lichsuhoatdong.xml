@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Màn hình lịch sử hoạt động của admin.
+    Giao diện gồm:
+    1. Thanh tiêu đề có nút quay lại
+    2. Tiêu đề danh sách lịch sử
+    3. Nội dung lịch sử lấy từ SharedPreferences
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.lichsuhoatdong"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="#FFF5FA">
+
+    <!-- Thanh tiêu đề phía trên -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#A9F1A8">
+
+        <!-- Nút quay lại trang admin -->
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="12dp"
+            android:src="@drawable/left" />
+
+        <!-- Tiêu đề màn hình -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="LỊCH SỬ"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
+
+        <!-- View trống để tiêu đề nằm giữa đẹp hơn -->
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
+
+    <!-- Tiêu đề danh sách lịch sử -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DANH SÁCH LỊCH SỬ"
+        android:gravity="center"
+        android:textStyle="bold|italic"
+        android:textSize="18sp"
+        android:textColor="#E91E63"
+        android:paddingTop="14dp"
+        android:paddingBottom="10dp" />
+
+    <!-- Khung chứa nội dung lịch sử -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="12dp">
+
+        <!-- TextView hiển thị nội dung lịch sử -->
+        <TextView
+            android:id="@+id/history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chưa có lịch sử hoạt động"
+            android:textSize="15sp"
+            android:textColor="#333333"
+            android:lineSpacingExtra="5dp"
+            android:padding="14dp"
+            android:background="#FFFFFF" />
+
+    </ScrollView>
+
+</LinearLayout>

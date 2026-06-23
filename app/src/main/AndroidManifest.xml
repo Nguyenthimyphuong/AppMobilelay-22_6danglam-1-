@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppMobile"
+        tools:targetApi="31">
+        <activity
+            android:name=".Activity.lichsuhoatdong"
+            android:exported="false" />
+        <!--<activity
+            android:name=".Activity.MainActivity"
+            android:exported="false" />-->
+        <activity
+            android:name=".Activity.giohang"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.hoadon_user"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.thanhtoan_user"
+            android:exported="false" />
+        <activity android:name=".Activity.don_da_dat_user" />
+        <activity
+            android:name=".Activity.thongke"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.nhantin"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.quanly_sanpham"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.DangKy"
+            android:exported="false"/>
+        <activity
+            android:name=".Activity.login"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.quanly_khachhang"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.quanly_nhanvien"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.quantri_page"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.admin_page"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SubActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.user_Page"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.quanly_nhacungcap"
+            android:exported="false"/>
+        <activity
+            android:name=".Activity.quanly_chitiet_ncc"
+            android:exported="false"/>
+        <activity
+            android:name=".Activity.DanhSachKhachHangActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".Activity.ChiTietKhachHangActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".Activity.DanhSachHoaDonActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".Activity.ChiTietHoaDonActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".Activity.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

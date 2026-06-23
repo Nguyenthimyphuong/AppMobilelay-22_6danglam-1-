@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.login"
+    android:background="@drawable/backgroundlogin">
+
+    <!-- Nút mũi tên quay lại trang chủ -->
+    <ImageView
+        android:id="@+id/btn_back_login"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/left"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:padding="2dp" />
+
+    <!-- Khung login -->
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="480dp"
+        android:layout_gravity="center"
+        android:background="@drawable/layout_login"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/fontbibomart"
+            android:gravity="center_horizontal"
+            android:text="Login"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="229dp"
+            android:layout_height="191dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/imgmaybay" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="Tài khoản*"
+                android:textStyle="bold"
+                android:textSize="19sp" />
+
+            <EditText
+                android:id="@+id/edt_us"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:hint="Nhập tên tài khoản"
+                android:paddingLeft="15sp"
+                android:background="@drawable/custom_edittext" />
+
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="Mật khẩu*"
+                android:textStyle="bold"
+                android:textSize="19sp" />
+
+            <EditText
+                android:id="@+id/edt_pw"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:hint="Nhập mật khẩu"
+                android:paddingLeft="15sp"
+                android:inputType="textPassword"
+                android:background="@drawable/custom_edittext" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="150dp"
+                android:layout_height="55dp"
+                android:text="Login"
+                android:backgroundTint="#E1EA8F"
+                android:textSize="21sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Màn hình thống kê đơn hàng.
+    Chức năng:
+    - Nhập ngày cần thống kê
+    - Bấm Hôm nay để lấy ngày hiện tại
+    - Bấm Thống kê để xem số đơn và doanh thu trong ngày
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF5FA">
+
+    <!-- Layout chính của màn hình -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Thanh tiêu đề phía trên -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#6F82D6">
+
+            <!--
+                Nút quay lại.
+                Dùng ImageView để mũi tên không bị lệch như TextView.
+                width và height 60dp giúp vùng bấm to hơn.
+                padding 6dp giúp mũi tên to và nằm cân giữa hơn.
+            -->
+            <ImageView
+                android:id="@+id/btn_back_thongke"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="6dp"
+                android:src="@drawable/left"
+                android:scaleType="centerInside"
+                android:contentDescription="Quay lại" />
+
+            <!--
+                Tiêu đề màn hình.
+                layout_weight="1" giúp tiêu đề chiếm phần còn lại ở giữa.
+            -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="THỐNG KÊ ĐƠN HÀNG"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <!--
+                Khoảng trống bên phải bằng đúng kích thước nút quay lại.
+                Như vậy tiêu đề sẽ nằm cân giữa màn hình.
+            -->
+            <Space
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+
+        </LinearLayout>
+
+        <!-- Khoảng cách dưới thanh tiêu đề -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <!-- Khối nhập ngày cần thống kê -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F2DCEB"
+            android:padding="14dp">
+
+            <!-- Nhãn nhập ngày -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nhập ngày cần thống kê"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Hướng dẫn định dạng ngày -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Ví dụ: 21/06/2026"
+                android:textColor="#777777"
+                android:textSize="13sp" />
+
+            <!-- Ô nhập ngày thống kê -->
+            <EditText
+                android:id="@+id/edtNgayThongKe"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="#FFFFFF"
+                android:hint="Nhập ngày dạng dd/MM/yyyy"
+                android:inputType="date"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textColor="#333333"
+                android:textSize="15sp" />
+
+            <!-- Hàng chứa 2 nút: Hôm nay và Thống kê -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <!-- Nút lấy ngày hôm nay -->
+                <Button
+                    android:id="@+id/btnHomNay"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#8B7AD8"
+                    android:text="Hôm nay"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+                <!-- Khoảng cách giữa 2 nút -->
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
+
+                <!-- Nút thực hiện thống kê -->
+                <Button
+                    android:id="@+id/btnThongKe"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#F27A9B"
+                    android:text="Thống kê"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Khoảng cách -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <!-- Hiển thị ngày đang xem -->
+        <TextView
+            android:id="@+id/txtNgayDangXem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="13dp"
+            android:text="Ngày đang xem: --/--/----"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Khoảng cách -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <!-- Khối hiển thị số đơn bán được trong ngày -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:background="#FFFFFF"
+            android:padding="14dp">
+
+            <!-- Nhãn số đơn -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Số đơn bán được trong ngày"
+                android:textColor="#666666"
+                android:textSize="15sp" />
+
+            <!-- Kết quả số đơn -->
+            <TextView
+                android:id="@+id/txtSoDonTrongNgay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="0 đơn"
+                android:textColor="#6E4ACB"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Khoảng cách -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <!-- Khối hiển thị doanh thu trong ngày -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:background="#FFFFFF"
+            android:padding="14dp">
+
+            <!-- Nhãn doanh thu -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Doanh thu trong ngày"
+                android:textColor="#666666"
+                android:textSize="15sp" />
+
+            <!-- Kết quả doanh thu -->
+            <TextView
+                android:id="@+id/txtDoanhThuTrongNgay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="0 VND"
+                android:textColor="#E91E63"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Khoảng cách -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <!-- Tiêu đề danh sách đơn trong ngày -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Danh sách đơn trong ngày"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!--
+            Danh sách đơn trong ngày.
+            Nội dung được setText từ file thongke.java.
+        -->
+        <TextView
+            android:id="@+id/txtDanhSachDonTrongNgay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="#FFFFFF"
+            android:minHeight="130dp"
+            android:padding="14dp"
+            android:text="Chưa có dữ liệu"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</ScrollView>

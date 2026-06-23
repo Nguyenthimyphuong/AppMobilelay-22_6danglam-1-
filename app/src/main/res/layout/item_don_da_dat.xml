@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    File này là giao diện của MỖI đơn hàng trong trang "Các đơn đã đặt".
+    Mỗi đơn sẽ nằm trong một khung riêng để dễ phân biệt.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/bg_item_don_da_dat">
+
+    <!-- Mã đơn hàng -->
+    <TextView
+        android:id="@+id/txt_item_ma_don"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mã đơn hàng: HD1"
+        android:textColor="#6E4ACB"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <!-- Ngày đặt -->
+    <TextView
+        android:id="@+id/txt_item_ngay_dat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Ngày đặt: 22/06/2026 08:34"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <!-- Người nhận -->
+    <TextView
+        android:id="@+id/txt_item_nguoi_nhan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Người nhận: Thúy"
+        android:textColor="#333333"
+        android:textSize="14sp" />
+
+    <!-- Số điện thoại -->
+    <TextView
+        android:id="@+id/txt_item_sdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="SĐT: 0389842320"
+        android:textColor="#333333"
+        android:textSize="14sp" />
+
+    <!-- Địa chỉ -->
+    <TextView
+        android:id="@+id/txt_item_dia_chi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Địa chỉ: Hưng Yên"
+        android:textColor="#333333"
+        android:textSize="14sp" />
+
+    <!-- Đường kẻ ngăn phần thông tin và sản phẩm -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#D8C5EC" />
+
+    <!-- Tiêu đề sản phẩm -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sản phẩm đã mua:"
+        android:textColor="#F06292"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <!-- Danh sách sản phẩm đã mua -->
+    <TextView
+        android:id="@+id/txt_item_san_pham"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="1. Bình sữa cho bé"
+        android:textColor="#333333"
+        android:textSize="14sp" />
+
+    <!-- Tổng tiền -->
+    <TextView
+        android:id="@+id/txt_item_tong_tien"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Tổng tiền: 150.000 VND"
+        android:textColor="#6E4ACB"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <!-- Hình thức thanh toán -->
+    <TextView
+        android:id="@+id/txt_item_thanh_toan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Thanh toán: Thanh toán khi nhận hàng COD"
+        android:textColor="#333333"
+        android:textSize="14sp" />
+
+</LinearLayout>

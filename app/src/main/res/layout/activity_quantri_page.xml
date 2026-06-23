@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Giao diện trang quản trị Admin -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.quantri_page"
+    android:orientation="vertical"
+    android:background="#FFF7FB"
+    android:fitsSystemWindows="true"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="10dp">
+
+    <!-- Thanh tiêu đề admin -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#5C74B8">
+
+        <!-- Nút quay lại -->
+        <ImageView
+            android:id="@+id/btn_back_admin"
+            android:layout_width="58dp"
+            android:layout_height="match_parent"
+            android:padding="13dp"
+            android:src="@drawable/left"
+            android:scaleType="fitCenter" />
+
+        <!-- Tiêu đề -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Quản lý"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
+
+        <!-- Nút đăng xuất -->
+        <Button
+            android:id="@+id/btn_logout_admin"
+            android:layout_width="105dp"
+            android:layout_height="42dp"
+            android:layout_marginRight="6dp"
+            android:text="Đăng xuất"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="#5C74B8"
+            android:backgroundTint="#FFFFFF"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="10dp" />
+
+    <!-- Thông tin admin -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#C0BEEE">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/client" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phượng Thúy"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#333333" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="16dp" />
+
+    <!-- Hàng 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Quản lý khách hàng -->
+        <TableLayout
+            android:id="@+id/btn_qlkh"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button_admin_page"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp">
+
+                <ImageView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:src="@drawable/client" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quản lý khách hàng"
+                    android:textSize="12sp"
+                    android:textColor="#333333"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:maxLines="2"
+                    android:layout_marginTop="5dp" />
+
+            </LinearLayout>
+
+        </TableLayout>
+
+        <Space
+            android:layout_width="14dp"
+            android:layout_height="match_parent" />
+
+        <!-- Quản lý nhà cung cấp -->
+        <TableLayout
+            android:id="@+id/btn_qlncc"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button_admin_page"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp">
+
+                <ImageView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:src="@drawable/client" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quản lý nhà cung cấp"
+                    android:textSize="12sp"
+                    android:textColor="#333333"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:maxLines="2"
+                    android:layout_marginTop="5dp" />
+
+            </LinearLayout>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="14dp" />
+
+    <!-- Hàng 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Quản lý sản phẩm -->
+        <TableLayout
+            android:id="@+id/btn_qlsp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button_admin_page"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp">
+
+                <ImageView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:src="@drawable/product" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quản lý sản phẩm"
+                    android:textSize="12sp"
+                    android:textColor="#333333"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:maxLines="2"
+                    android:layout_marginTop="5dp" />
+
+            </LinearLayout>
+
+        </TableLayout>
+
+        <Space
+            android:layout_width="14dp"
+            android:layout_height="match_parent" />
+
+        <!-- Quản lý hóa đơn -->
+        <TableLayout
+            android:id="@+id/btn_qlbill"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button_admin_page"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp">
+
+                <ImageView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:src="@drawable/bill" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quản lý hóa đơn"
+                    android:textSize="12sp"
+                    android:textColor="#333333"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:maxLines="2"
+                    android:layout_marginTop="5dp" />
+
+            </LinearLayout>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="14dp" />
+
+    <!-- Hàng 3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Lịch sử -->
+        <TableLayout
+            android:id="@+id/btn_history"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button_admin_page"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp">
+
+                <ImageView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:src="@drawable/history" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lịch sử"
+                    android:textSize="12sp"
+                    android:textColor="#333333"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:maxLines="2"
+                    android:layout_marginTop="5dp" />
+
+            </LinearLayout>
+
+        </TableLayout>
+
+        <Space
+            android:layout_width="14dp"
+            android:layout_height="match_parent" />
+
+        <!-- Thống kê -->
+        <TableLayout
+            android:id="@+id/btn_qlthongke"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button_admin_page"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp">
+
+                <ImageView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:src="@drawable/thongke" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Thống kê"
+                    android:textSize="12sp"
+                    android:textColor="#333333"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:maxLines="2"
+                    android:layout_marginTop="5dp" />
+
+            </LinearLayout>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

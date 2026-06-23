@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    File item_giohang.xml dùng để thiết kế giao diện cho MỖI sản phẩm
+    trong trang Giỏ hàng.
+    Các id trong file này phải trùng với Adapter_giohang.java.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="#C7CCE8"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <!-- Ảnh sản phẩm -->
+    <ImageView
+        android:id="@+id/img_cart"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:background="#FFFFFF"
+        android:padding="5dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/itemuser1" />
+
+    <!-- Khoảng cách giữa ảnh và thông tin -->
+    <Space
+        android:layout_width="10dp"
+        android:layout_height="match_parent" />
+
+    <!-- Phần thông tin sản phẩm -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Tên sản phẩm -->
+        <TextView
+            android:id="@+id/txt_cart_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="Tên sản phẩm"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- Giá sản phẩm -->
+        <TextView
+            android:id="@+id/txt_cart_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Giá: 150.000 VND"
+            android:textColor="#333333"
+            android:textSize="13sp" />
+
+        <!-- Khu vực nút trừ, cộng, xóa -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Nút trừ số lượng -->
+            <TextView
+                android:id="@+id/btn_tru"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="#6E4ACB"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Hiển thị số lượng -->
+            <TextView
+                android:id="@+id/txt_so_luong"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Nút cộng số lượng -->
+            <TextView
+                android:id="@+id/btn_cong"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="#6E4ACB"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Khoảng cách trước nút xóa -->
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="match_parent" />
+
+            <!-- Nút xóa sản phẩm khỏi giỏ hàng -->
+            <TextView
+                android:id="@+id/btn_xoa"
+                android:layout_width="68dp"
+                android:layout_height="36dp"
+                android:background="#E91E63"
+                android:gravity="center"
+                android:text="Xóa"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Thành tiền của sản phẩm -->
+        <TextView
+            android:id="@+id/txt_thanh_tien"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Thành tiền: 150.000 VND"
+            android:textColor="#333333"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

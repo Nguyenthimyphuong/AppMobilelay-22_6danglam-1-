@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AppMobile</string>
+    <string name="nav_qlnv_admin_page">Personnel Management</string>
+    <string name="nav_qlkh_admin_page">Client Management</string>
+    <string name="nav_qlsp_admin_page">Product Management</string>
+    <string name="nav_qlhd_admin_page">Bill Management</string>
+    <string name="nav_history_admin_page">History</string>
+    <string name="nav_account_admin_page">Account</string>
+    <string name="nav_signOut_admin_page">Sign out</string>
+</resources>
