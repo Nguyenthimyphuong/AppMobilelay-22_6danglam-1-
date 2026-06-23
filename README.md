@@ -1,4 +1,4 @@
-# Tên Đề Tài Dự Án: Xây Dựng App Bán Hàng Mẹ Và 
+# Tên Đề Tài Dự Án: Xây Dựng App Bán Hàng Mẹ Và Bé
 
 ## 1. Giới thiệu đề tài
 - **Bài toán:** 
