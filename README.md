@@ -1,5 +1,13 @@
 # Tên Đề Tài Dự Án: Xây Dựng App Bán Hàng Mẹ Và Bé
 
+> ☕ **Nếu dự án này giúp ích cho bạn, hãy mời mình một cốc nước để có thêm động lực nhé! Cảm ơn bạn rất nhiều!**
+>Hoan hỉ hoan hỉ. Donate thì sẽ được gấp đôi sự may mắn đó. Ahihi. UTEHY - K21
+> **Thông tin Donate (Chuyển khoản):**
+> - **Ngân hàng:** MB Bank
+> - **Số tài khoản:** 02788888888899
+> - **Chủ tài khoản:** NGUYEN THI MY PHUONG
+> - **Nội dung:** `Donate App Mobile`
+
 ## 1. Giới thiệu đề tài
 - **Bài toán:** 
 Trong những năm gần đây, nhu cầu mua sắm trực tuyến ngày càng phát triển mạnh mẽ, đặc biệt là trên các thiết bị di động. Điện thoại thông minh trở thành công cụ quen thuộc trong đời sống hằng ngày, giúp người dùng có thể tìm kiếm thông tin, lựa chọn sản phẩm và thực hiện các giao dịch mua bán một cách nhanh chóng, thuận tiện. Đối với các gia đình có trẻ nhỏ, nhu cầu mua sắm các sản phẩm mẹ và bé như bỉm, sữa, khăn ướt, đồ dùng sơ sinh, quần áo trẻ em, sản phẩm chăm sóc mẹ và bé luôn diễn ra thường xuyên. Vì vậy, việc xây dựng một ứng dụng mobile hỗ trợ bán đồ mẹ và bé là cần thiết, phù hợp với xu hướng mua sắm hiện đại.
